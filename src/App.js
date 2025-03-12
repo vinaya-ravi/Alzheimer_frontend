@@ -96,7 +96,8 @@ function App() {
     try {
       setTimeout(async () => {
         try {
-          const response = await fetch(`${process.env.REACT_APP_API_URL}/predict`, {
+          const apiUrl = process.env.REACT_APP_API_URL || 'https://alzheimer-cnn-api.onrender.com';
+          const response = await fetch(`${apiUrl}/predict`, {
             method: 'POST',
             body: formData,
           });
