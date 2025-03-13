@@ -91,7 +91,7 @@ function App() {
     setError(null);
     
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('image', file);
     
     try {
       setTimeout(async () => {

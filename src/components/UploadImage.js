@@ -12,7 +12,7 @@ const UploadImage = ({ onUpload }) => {
     if (!file) return alert('Please upload an image.');
 
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('image', file);
 
     const response = await fetch(`${process.env.REACT_APP_API_URL}/predict`, {
       method: 'POST',
